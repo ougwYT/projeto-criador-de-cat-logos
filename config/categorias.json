@@ -1,0 +1,70 @@
+{
+    "RESISTÊNCIAS": [
+        "RESISTENCIA",
+        "DUCHA",
+        "LOREN",
+        "SHOWER"
+    ],
+
+    "FERRAMENTAS": [
+        "ALICATE",
+        "MARTELO",
+        "CHAVE",
+        "BROCA",
+        "SERROTE",
+        "TRENA",
+        "ARCO"
+    ],
+
+    "FIXAÇÃO": [
+        "BUCHA",
+        "PARAFUSO",
+        "ABRACADEIRA",
+        "PORCA",
+        "ARRUELA"
+    ],
+
+    "ELÉTRICA": [
+        "FITA",
+        "PLUG",
+        "TOMADA",
+        "INTERRUPTOR",
+        "CABO",
+        "ADAPTADOR"
+    ],
+
+    "HIDRÁULICA": [
+        "TORNEIRA",
+        "REGISTRO",
+        "SIFAO",
+        "ENGATE",
+        "JOELHO"
+    ],
+
+    "PINTURA": [
+        "PINCEL",
+        "ROLO",
+        "BANDEJA",
+        "ESPATULA"
+    ],
+    
+    "empresa": "SENNA FIX",
+
+    "whatsapp": "5511959946416",
+
+    "telefone": "(11) 95994-6416",
+
+    "logo": "assets/logo.png",
+
+    "cor_primaria": "#10233D",
+
+    "cor_secundaria": "#F4BE00",
+
+    "mostrar_saldo": false,
+
+    "mostrar_fornecedor": false,
+
+    "preco_utilizado": "preco_atacado"
+}
+
+

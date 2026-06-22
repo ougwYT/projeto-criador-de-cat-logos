@@ -1,0 +1,5 @@
+pandas
+pdfplumber
+playwright
+qrcode[pil]
+rapidfuzz
