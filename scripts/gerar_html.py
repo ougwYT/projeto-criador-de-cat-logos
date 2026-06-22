@@ -372,7 +372,7 @@ html = f"""<!DOCTYPE html>
 
 <header class="topo-catalogo">
     <a href="#inicial_page">
-        <img src="../entrada/assets/logo.png" alt="Senna Fix" class="logo-catalogo">
+        <img src="{LOGO}" alt="Senna Fix" class="logo-catalogo">
     </a>
 </header>
 
