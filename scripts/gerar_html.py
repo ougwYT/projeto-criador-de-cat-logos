@@ -9,8 +9,9 @@ CSV_ENTRADA = "dados/produtos_com_imagem.csv"
 
 HTML_SAIDA = "catalogo/index.html"
 
-PASTA_IMAGENS_HTML = "../entrada/imagens_nomeadas_corretamente"
-LOGO = "../entrada/assets/logo.png"
+PASTA_IMAGENS_HTML = "imagens_nomeadas_corretamente"
+LOGO = "assets/logo.png"
+QRCODE = "assets/qrcode_whatsapp.png"
 
 ORDEM_CATEGORIAS = [
     "ELETRICA",
@@ -24,7 +25,6 @@ ORDEM_CATEGORIAS = [
 SITE = "https://www.nucleuomnis.com.br/senafix/index.php"
 WHATSAPP_NUMERO = "5511939593526"
 WHATSAPP_LINK = f"https://wa.me/{WHATSAPP_NUMERO}"
-QRCODE = "../entrada/assets/qrcode_whatsapp.png"
 
 
 def converter_preco(valor):
@@ -361,7 +361,7 @@ html = f"""<!DOCTYPE html>
     <meta charset="utf-8">
     <title>Catálogo Senna Fix</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="../entrada/assets/logo_redondo.png">
+    <link rel="icon" type="image/png" href="assets/logo_redondo.png">
 </head>
 
 <body id="topo">
