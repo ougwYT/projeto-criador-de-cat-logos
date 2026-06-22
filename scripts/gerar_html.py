@@ -7,7 +7,7 @@ import pandas as pd
 
 CSV_ENTRADA = "dados/produtos_com_imagem.csv"
 
-HTML_SAIDA = "catalogo/index.html"
+HTML_SAIDA = "docs/index.html"
 
 PASTA_IMAGENS_HTML = "imagens_nomeadas_corretamente"
 LOGO = "assets/logo.png"
