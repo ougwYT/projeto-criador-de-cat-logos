@@ -1,9 +1,9 @@
 # Arquivos gerados
 dados/*.csv
 
-docs/index.html
-docs/catalogo_sennafix.pdf
-docs/assets/qrcode_whatsapp.png
+# docs/index.html
+# docs/catalogo_sennafix.pdf
+# docs/assets/qrcode_whatsapp.png
 
 # PDFs de entrada
 entrada/*.pdf
