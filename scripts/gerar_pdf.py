@@ -4,8 +4,8 @@ from pathlib import Path
 
 from playwright.sync_api import sync_playwright
 
-HTML_PATH = Path("catalogo/index.html").resolve()
-PDF_PATH = Path("catalogo/catalogo_sennafix.pdf").resolve()
+HTML_PATH = Path("docs/index.html").resolve()
+PDF_PATH = Path("docs/catalogo_sennafix.pdf").resolve()
 
 print("HTML usado:", HTML_PATH)
 
