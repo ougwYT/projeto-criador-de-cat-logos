@@ -16,6 +16,29 @@
 
 📦 Repositório: https://github.com/ougwYT/projeto-criador-de-cat-logos
 
+
+
+## 🚀 Como Utilizar
+
+Adicione os arquivos de entrada nas pastas correspondentes e execute:
+
+```bash
+python gerar_catalogo.py
+```
+
+O sistema executará automaticamente:
+
+1. Extração dos produtos
+2. Categorização automática
+3. Associação das imagens
+4. Geração do QR Code
+5. Geração do HTML
+6. Geração do PDF
+
+```
+```
+
+
 ## 📖 Sobre o Projeto
 
 Este projeto foi desenvolvido para automatizar a criação de catálogos comerciais da **Senna Fix**.
@@ -42,17 +65,20 @@ Com este projeto, todo o processo passou a ser automatizado.
 
 ## 🎯 Resultado
 
-📦 Mais de 380 produtos processados automaticamente
+📦 Mais de 400 produtos processados automaticamente
 
-🖼️ Mais de 400 imagens organizadas e associadas
+🖼️ Centenas de imagens associadas automaticamente
 
 ⚡ Geração automática de catálogo HTML
 
 📄 Geração automática de catálogo PDF
 
-🌐 Publicação automática via GitHub Pages
+🌐 Publicação online via GitHub Pages
 
 📱 Layout responsivo para Desktop, Tablet e Mobile
+
+🔄 Pipeline completa executada por um único comando
+
 
 ---
 
@@ -88,32 +114,61 @@ Os produtos são organizados automaticamente por categoria, exibindo imagem, có
 
 ---
 
-# 📂 Estrutura do Projeto
+## ⚙️ Instalação
 
-```text
+Clone o repositório:
+
+```bash
+git clone https://github.com/ougwYT/projeto-criador-de-cat-logos.git
+cd projeto-criador-de-cat-logos
+```
+
+Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+Instale os navegadores do Playwright:
+
+```bash
+python -m playwright install
+```
+
+## 📂 Estrutura do Projeto
+
+```
 projeto-criador-de-catalogos/
 
+├── config/
+│   └── categorias.json
+│
+├── dados/
+│   └── .gitkeep
+│
 ├── docs/
-│   ├── index.html
-│   ├── style.css
-│   ├── catalogo_sennafix.pdf
 │   ├── assets/
-│   └── imagens_nomeadas_corretamente/
+│   ├── imagens_nomeadas_corretamente/
+│   └── style.css
+│
+├── entrada/
+│   ├── grupos/
+│   └── .gitkeep
 │
 ├── scripts/
 │   ├── extrair_pdf.py
 │   ├── categorizar_por_grupo.py
 │   ├── produtos_com_imagens.py
+│   ├── gerar_qrcode.py
 │   ├── gerar_html.py
 │   └── gerar_pdf.py
 │
-├── dados/
-│   ├── produtos.csv
-│   ├── produtos_com_imagem.csv
-│   └── produtos_raw.csv
-│
-└── entrada/
+├── gerar_catalogo.py
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
+
 
 ---
 
