@@ -120,58 +120,56 @@ body {
    ESTATÍSTICAS DA CAPA
 ========================================== */
 
+/* Wrapper das estatísticas + QR */
 .estatisticas-wrapper {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 3rem;
-    margin-top: 3rem;
+
+    margin-top: 2.5rem;
+    width: 100%;
 }
 
 .estatisticas-capa {
     margin-top: 0;
-}
-
-.estatisticas-capa {
-    margin-top: 3rem;
 
     display: grid;
-    grid-template-columns: repeat(4, minmax(160px, 1fr));
-    gap: 1.3rem;
+    grid-template-columns: repeat(4, minmax(130px, 1fr));
+    gap: 1.1rem;
+
+    max-width: 760px;
 }
 
 .estatisticas-capa div {
-    background: rgba(255,255,255,.08);
-    border: 1px solid rgba(255,255,255,.28);
-    border-radius: 18px;
-
-    padding: 1.4rem 1rem;
-
-    text-align: center;
-    backdrop-filter: blur(6px);
+    padding: 1.1rem 0.8rem;
 }
 
 .estatisticas-capa strong {
-    display: block;
-
-    font-size: 2.3rem;
-
-    color: var(--secondary);
+    font-size: 1.9rem;
 }
 
 .estatisticas-capa span {
-    display: block;
-
-    margin-top: .25rem;
-
-    font-size: .95rem;
-    font-weight: 700;
-
-    color: white;
-
-    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 
+/* QR da capa */
+.capa-catalogo .qr-container {
+    width: 145px;
+    flex-shrink: 0;
+    padding: 0.8rem;
+}
+
+.capa-catalogo .qr-container img {
+    width: 105px;
+    height: 105px;
+}
+
+.capa-catalogo .qr-container p {
+    font-size: 0.75rem;
+    line-height: 1.25;
+    max-width: 120px;
+}
 
 
 /* ==========================================
@@ -716,6 +714,26 @@ body {
    RESPONSIVO - TABLETS
 ========================================== */
 
+@media (max-width: 900px) {
+
+    .estatisticas-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .estatisticas-capa {
+        grid-template-columns: repeat(2, minmax(130px, 1fr));
+        max-width: 500px;
+    }
+
+    .capa-catalogo .qr-container {
+        margin-top: 0;
+    }
+}
+
+
+
+
 @media (max-width: 768px) {
 
     body {
@@ -791,9 +809,26 @@ body {
 
     .contato-capa a {
         ll: unset;
-        cursor: pointer; /* Retorna o ícone de 'mãozinha' ao passar por cima *
+        cursor: pointer; 
     }
 
+    @media (max-width: 400px) {
+
+    .estatisticas-wrapper {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .estatisticas-capa {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .capa-catalogo .qr-container img {
+        width: 100px;
+        height: 100px;
+    }
+}
 
 
     .logo-capa {
@@ -901,21 +936,88 @@ body {
 
     .capa-catalogo {
         min-height: 100vh;
+        padding: 1.2rem;
+        overflow: hidden;
         page-break-after: always;
+    }
+
+    .capa-conteudo {
+        max-width: 100%;
+    }
+
+    .logo-capa {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1rem;
+    }
+
+    .capa-catalogo h1 {
+        font-size: 3rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .subtitulo-capa {
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .contato-capa {
+        font-size: 0.85rem;
+        line-height: 1.35;
+    }
+
+    .estatisticas-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.4rem;
+        width: 100%;
+    }
+
+    .estatisticas-capa {
+        display: grid;
+        grid-template-columns: repeat(4, 90px);
+        gap: 0.5rem;
+        margin-top: 0;
+        max-width: none;
+    }
+
+    .estatisticas-capa div {
+        padding: 0.65rem 0.3rem;
+        border-radius: 12px;
+    }
+
+    .estatisticas-capa strong {
+        font-size: 1.25rem;
+    }
+
+    .estatisticas-capa span {
+        font-size: 0.52rem;
+        margin-top: 0.15rem;
+    }
+
+    .capa-catalogo .qr-container {
+        width: 100px;
+        padding: 0.5rem;
+        flex-shrink: 0;
+    }
+
+    .capa-catalogo .qr-container img {
+        width: 72px;
+        height: 72px;
+        padding: 0.22rem;
+    }
+
+    .capa-catalogo .qr-container p {
+        font-size: 0.52rem;
+        line-height: 1.15;
+        max-width: 86px;
     }
 
     .pagina-final {
         min-height: auto;
         padding: 3rem 2rem;
-    }
-
-    .logo-final {
-        width: 180px;
-        height: 180px;
-    }
-
-    .pagina-final h1 {
-        font-size: 3rem;
     }
 
     .catalogo {
@@ -931,7 +1033,6 @@ body {
     .card {
         margin-top: 8px;
         box-shadow: 0 8px 24px rgba(0,0,0,.14);
-
         break-inside: avoid;
         page-break-inside: avoid;
     }
@@ -940,14 +1041,5 @@ body {
         height: 260px;
         padding: 1.2rem;
     }
-
-    .card-body {
-        break-inside: avoid;
-        page-break-inside: avoid;
-    }
-
-    .titulo-categoria {
-        break-after: avoid;
-        page-break-after: avoid;
-    }
 }
+
