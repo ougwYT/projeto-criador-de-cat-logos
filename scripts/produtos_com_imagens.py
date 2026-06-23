@@ -1,6 +1,7 @@
 import json
 import os
 import re
+from pathlib import Path
 
 import pandas as pd
 
@@ -8,7 +9,7 @@ CSV_PRODUTOS = "dados/produtos_categorizados.csv"
 
 CSV_SAIDA = "dados/produtos_com_imagem.csv"
 
-PASTA_IMAGENS = "entrada/imagens_nomeadas_corretamente"
+PASTA_IMAGENS = Path().parent / 'docs' / "imagens_nomeadas_corretamente"
 
 JSON_EXCLUIDOS = "config/produtos_excluidos.json"
 

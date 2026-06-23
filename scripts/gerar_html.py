@@ -21,6 +21,14 @@ ORDEM_CATEGORIAS = [
     "SEM GRUPO"
 ]
 
+ICONS = {
+    "FERRAMENTAS": "🔧",
+    "ELETRICA": "⚡",
+    "HIDRAULICA": "🚿",
+    "UTILIDADES": "📦",
+    "SEM GRUPO": "📁"
+}
+
 
 SITE = "https://www.nucleuomnis.com.br/senafix/index.php"
 WHATSAPP_NUMERO = "5511939593526"
@@ -270,7 +278,7 @@ capa = f"""
 
         <img src="{LOGO}" alt="Senna Fix" class="logo-capa">
 
-        <h1>Catálogo Senna Fix</h1>
+        <h1>Catálogo <span>Senna Fix</span></h1>
 
         <p class="subtitulo-capa">
             Ferramentas • Elétrica • Fixação • Pintura • Utilidades
@@ -278,28 +286,53 @@ capa = f"""
 
         <div class="contato-capa">
             <p>WhatsApp: (11) 93959-3526</p>
-            <p>https://www.nucleuomnis.com.br/senafix/index.php</p>
+            <a>https://www.nucleuomnis.com.br/senafix/index.php</a>
         </div>
-        <div class="estatisticas-capa">
-    <div>
-        <strong>{total_produtos_catalogo}</strong>
-        <span>Produtos</span>
+        </div>
+        
+        
+    <div class="estatisticas-wrapper">
+
+    <div class="estatisticas-capa">
+
+        <div>
+            <strong>{total_produtos_catalogo}+</strong>
+            <span>Produtos</span>
+        </div>
+
+        <div>
+            <strong>{total_categorias}</strong>
+            <span>Categorias</span>
+        </div>
+
+        <div>
+            <strong>100%</strong>
+            <span>Qualidade</span>
+        </div>
+
+        <div>
+            <strong>QR</strong>
+            <span>Fale conosco</span>
+        </div>
+
     </div>
 
-    <div>
-        <strong>{total_categorias}</strong>
-        <span>Categorias</span>
-    </div>
-</div>
-        
-        
-        
-        <div class="qr-container">
-        
+    <div class="qr-container">
+
         <img src="{QRCODE}" alt="QR Code WhatsApp">
-        <p>Escaneie para solicitar orçamento</p>
+
+        <p>
+            Escaneie para solicitar orçamento
+        </p>
+
+    </div>
+
+</div>
+
+
         
-        </div>
+    
+    
 
     </div>
 
@@ -347,10 +380,21 @@ for categoria in ORDEM_CATEGORIAS:
         if grupo.empty:
             continue
 
+    icone = ICONS.get(categoria, "📦")
+
     botoes_categoria.append(
         f"""
-        <a href="#categoria-{gerar_id_categoria(categoria)}" class="btn-categoria">
-            {escape(categoria)}
+        <a href="#categoria-{gerar_id_categoria(categoria)}"
+           class="card-categoria-home">
+
+            <div class="icone-categoria">
+                {icone}
+            </div>
+
+            <span>
+                {escape(categoria)}
+            </span>
+
         </a>
         """
     )
@@ -389,11 +433,21 @@ html = f"""<!DOCTYPE html>
 
 
 
-    <div class="filtros-categoria">
+<section class="secao-categorias-home">
+
+    <h2>Nossas Categorias</h2>
+
+    <p>
+        Navegue pelas categorias e encontre o produto ideal
+        para sua necessidade.
+    </p>
+
+    <div class="categorias-home">
 
         {''.join(botoes_categoria)}
 
     </div>
+    </section>
 
 </section>
 
@@ -406,7 +460,7 @@ html = f"""<!DOCTYPE html>
 
 </html>
 """
-Path("catalogo").mkdir(exist_ok=True)
+Path("docs").mkdir(exist_ok=True)
 with open(HTML_SAIDA, "w", encoding="utf-8") as arquivo:
     arquivo.write(html)
 

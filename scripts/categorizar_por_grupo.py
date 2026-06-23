@@ -8,10 +8,10 @@ CSV_PRODUTOS = "dados/produtos.csv"
 CSV_SAIDA = "dados/produtos_categorizados.csv"
 
 ARQUIVOS_GRUPOS = {
-    "ELETRICA": "entrada/grupos/grupo_eletrica.pdf",
-    "FERRAMENTAS": "entrada/grupos/grupo_ferramentas.pdf",
-    "HIDRAULICA": "entrada/grupos/grupo_hidraulica.pdf",
-    "UTILIDADES": "entrada/grupos/grupos_utilidades.pdf",
+    "ELETRICA": Path().parent / "entrada/grupos/grupo_eletrica.pdf",
+    "FERRAMENTAS": Path().parent / "entrada/grupos/grupo_ferramentas.pdf",
+    "HIDRAULICA": Path().parent / "entrada/grupos/grupo_hidraulica.pdf",
+    "UTILIDADES": Path().parent / "entrada/grupos/grupo_utilidades.pdf",
 }
 
 
