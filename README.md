@@ -224,17 +224,82 @@ O catálogo é gerado automaticamente com páginas específicas para cada grupo 
 
 ---
 
-# Melhoria a serem feitas
+# 🚀 Próximas Melhorias
 
-📱 Responsividade aprimorada
-☑ Desktop
-☑ Tablet
-☑ Mobile
-☐ Busca por produtos
-☐ Filtros dinâmicos
-☐ Painel administrativo
-☐ Exportação Excel
-☐ Progressive Web App (PWA)
+O projeto está funcional e em produção, mas ainda existem diversas evoluções planejadas para torná-lo mais completo, escalável e amigável para usuários e administradores.
+
+### 📱 Responsividade Avançada
+
+* ✅ Desktop
+* ✅ Tablet
+* ✅ Mobile
+* 🔄 Otimização para telas ultrawide
+* 🔄 Ajustes específicos para dispositivos abaixo de 400px
+
+### 🔍 Busca e Navegação
+
+* ☐ Busca por nome do produto
+* ☐ Busca por código
+* ☐ Busca por categoria
+* ☐ Destaque visual dos resultados encontrados
+
+### 🗂️ Filtros Inteligentes
+
+* ☐ Filtro por categoria
+* ☐ Filtro por faixa de preço
+* ☐ Filtro por disponibilidade
+* ☐ Combinação de múltiplos filtros
+
+### 📊 Exportação de Dados
+
+* ☐ Exportação para Excel (.xlsx)
+* ☐ Exportação para CSV
+* ☐ Relatórios por categoria
+* ☐ Relatórios de produtos sem imagem
+
+### 🖼️ Processamento de Imagens
+
+* ☐ Compressão automática
+* ☐ Redimensionamento inteligente
+* ☐ Conversão automática de formatos
+* ☐ Validação de qualidade das imagens
+
+### ⚙️ Painel Administrativo
+
+* ☐ Cadastro de produtos
+* ☐ Edição de preços
+* ☐ Gerenciamento de categorias
+* ☐ Upload de imagens
+* ☐ Controle de catálogo publicado
+
+### 📄 Geração de Catálogos
+
+* ☐ Múltiplos modelos de layout
+* ☐ Personalização de cores
+* ☐ Catálogos por categoria
+* ☐ Catálogos promocionais automáticos
+
+### 🌐 Plataforma Web
+
+* ☐ Progressive Web App (PWA)
+* ☐ Modo offline
+* ☐ Instalação em dispositivos móveis
+* ☐ Cache inteligente
+
+### 🤖 Automação e IA
+
+* ☐ Associação automática de imagens por IA
+* ☐ Correção automática de descrições
+* ☐ Sugestão de categorias
+* ☐ Geração automática de textos promocionais
+
+### 🔒 Infraestrutura
+
+* ☐ Deploy automatizado via GitHub Actions
+* ☐ Testes automatizados
+* ☐ Monitoramento de erros
+* ☐ Backup automático dos catálogos
+
 
 
 # 💡 Aprendizados
