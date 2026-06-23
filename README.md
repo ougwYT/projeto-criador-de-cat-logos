@@ -224,6 +224,19 @@ O catálogo é gerado automaticamente com páginas específicas para cada grupo 
 
 ---
 
+# Melhoria a serem feitas
+
+📱 Responsividade aprimorada
+☑ Desktop
+☑ Tablet
+☑ Mobile
+☐ Busca por produtos
+☐ Filtros dinâmicos
+☐ Painel administrativo
+☐ Exportação Excel
+☐ Progressive Web App (PWA)
+
+
 # 💡 Aprendizados
 
 Durante o desenvolvimento foram praticados:
