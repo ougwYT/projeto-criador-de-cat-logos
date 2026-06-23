@@ -696,3 +696,114 @@ body{
 
 }
 
+/* ==========================================
+   CELULARES PEQUENOS
+========================================== */
+
+@media (max-width: 400px) {
+
+    .hero-catalogo h1 {
+        font-size: 2rem;
+    }
+
+    .capa-catalogo h1,
+    .pagina-final h1,
+    .indice-catalogo h1 {
+        font-size: 2.2rem;
+    }
+
+    .capa-categoria h1 {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+
+    .subtitulo-capa {
+        font-size: 1rem;
+    }
+
+    .contato-capa p,
+    .pagina-final p {
+        font-size: 0.95rem;
+    }
+
+    .logo-capa {
+        width: 180px;
+        height: 180px;
+    }
+
+    .logo-final {
+        width: 160px;
+        height: 160px;
+    }
+
+    .catalogo {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-img {
+        height: 180px;
+    }
+
+    .nome {
+        font-size: 1rem;
+        min-height: auto;
+    }
+
+    .preco {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+
+    .btn-categoria {
+        width: 100%;
+        text-align: center;
+    }
+
+    .filtros-categoria {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0 1rem;
+    }
+
+    .estatisticas-capa div {
+        min-width: 120px;
+        padding: 1rem;
+    }
+
+    .qr-container img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .topo-catalogo {
+        padding: .5rem;
+    }
+
+    .logo-catalogo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
+    }
+
+    .capa-catalogo h1,
+    .pagina-final h1 {
+        font-size: 3rem;
+    }
+
+    .capa-categoria h1 {
+        font-size: 3.5rem;
+    }
+}
