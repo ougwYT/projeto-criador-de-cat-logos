@@ -8,7 +8,13 @@
 ![Playwright](https://img.shields.io/badge/Playwright-PDF-red)
 ![Status](https://img.shields.io/badge/Status-Concluído-success)
 
----
+
+
+## 🔗 Links
+
+🌐 Demo Online: https://ougwyt.github.io/projeto-criador-de-cat-logos/
+
+📦 Repositório: https://github.com/ougwYT/projeto-criador-de-cat-logos
 
 ## 📖 Sobre o Projeto
 
@@ -26,21 +32,46 @@ Com este projeto, todo o processo passou a ser automatizado.
 
 ---
 
+# ⭐ Destaques
+
+- Automação completa do processo de geração de catálogos
+- Projeto aplicado em um caso real de negócio
+- Integração entre PDF, CSV, HTML e GitHub Pages
+- Geração de catálogo web e PDF a partir da mesma base de dados
+- Publicação online automatizada
+
 ## 🎯 Resultado
 
-✅ 380+ produtos processados automaticamente
+📦 Mais de 380 produtos processados automaticamente
 
-✅ Catálogo Web responsivo
+🖼️ Mais de 400 imagens organizadas e associadas
 
-✅ Catálogo PDF pronto para impressão
+⚡ Geração automática de catálogo HTML
 
-✅ Organização automática por categorias
+📄 Geração automática de catálogo PDF
 
-✅ Associação automática de imagens
+🌐 Publicação automática via GitHub Pages
 
-✅ Publicação online via GitHub Pages
+📱 Layout responsivo para Desktop, Tablet e Mobile
 
 ---
+
+# 📸 Screenshots
+
+## 🏠 Página Inicial
+
+A página inicial apresenta a identidade visual da empresa, estatísticas do catálogo, QR Code para contato e acesso rápido às categorias.
+
+![Página Inicial](docs/assets/screenshots/home.png)
+
+---
+
+## 🛠️ Catálogo de Produtos
+
+Os produtos são organizados automaticamente por categoria, exibindo imagem, código e preço de forma responsiva para desktop, tablet e dispositivos móveis.
+
+![Catálogo](docs/assets/screenshots/catalogo.png)
+
 
 # 🛠 Tecnologias Utilizadas
 
@@ -200,17 +231,11 @@ https://ougwyt.github.io/projeto-criador-de-cat-logos/
 
 # 📈 Desafios Resolvidos
 
-### ✔ Extração de PDFs com formatos diferentes
+### ✔ Múltiplos formatos de PDF
 
-Foi necessário criar múltiplas expressões regulares:
+Durante o desenvolvimento foi identificado que diferentes versões do sistema geravam PDFs com estruturas distintas.
 
-```python
-padrao_1 = re.compile(...)
-padrao_2 = re.compile(...)
-padrao_3 = re.compile(...)
-```
-
----
+Para resolver o problema foram implementados múltiplos padrões de Expressões Regulares (Regex), permitindo que o sistema interpretasse corretamente diferentes formatos de listagem.
 
 ### ✔ Associação de centenas de imagens
 
@@ -226,22 +251,20 @@ O catálogo é gerado automaticamente com páginas específicas para cada grupo 
 
 # 🚀 Próximas Melhorias
 
-O projeto está funcional e em produção, mas ainda existem diversas evoluções planejadas para torná-lo mais completo, escalável e amigável para usuários e administradores.
+### 📱 Experiência do Usuário
 
-### 📱 Responsividade Avançada
-
-* ✅ Desktop
-* ✅ Tablet
-* ✅ Mobile
-* 🔄 Otimização para telas ultrawide
-* 🔄 Ajustes específicos para dispositivos abaixo de 400px
+* ✅ Layout Desktop
+* ✅ Layout Tablet
+* ✅ Layout Mobile
+* ☐ Otimização para telas ultrawide
+* ☐ Melhorias de acessibilidade
 
 ### 🔍 Busca e Navegação
 
 * ☐ Busca por nome do produto
 * ☐ Busca por código
-* ☐ Busca por categoria
 * ☐ Destaque visual dos resultados encontrados
+* ☐ Pesquisa em tempo real
 
 ### 🗂️ Filtros Inteligentes
 
@@ -250,17 +273,17 @@ O projeto está funcional e em produção, mas ainda existem diversas evoluçõe
 * ☐ Filtro por disponibilidade
 * ☐ Combinação de múltiplos filtros
 
-### 📊 Exportação de Dados
+### 📊 Relatórios e Exportação
 
 * ☐ Exportação para Excel (.xlsx)
 * ☐ Exportação para CSV
 * ☐ Relatórios por categoria
-* ☐ Relatórios de produtos sem imagem
+* ☐ Relatório de produtos sem imagem
 
-### 🖼️ Processamento de Imagens
+### 🖼️ Tratamento de Imagens
 
 * ☐ Compressão automática
-* ☐ Redimensionamento inteligente
+* ☐ Padronização de resolução
 * ☐ Conversão automática de formatos
 * ☐ Validação de qualidade das imagens
 
@@ -270,37 +293,38 @@ O projeto está funcional e em produção, mas ainda existem diversas evoluçõe
 * ☐ Edição de preços
 * ☐ Gerenciamento de categorias
 * ☐ Upload de imagens
-* ☐ Controle de catálogo publicado
-
-### 📄 Geração de Catálogos
-
-* ☐ Múltiplos modelos de layout
-* ☐ Personalização de cores
-* ☐ Catálogos por categoria
-* ☐ Catálogos promocionais automáticos
+* ☐ Publicação automática do catálogo
 
 ### 🌐 Plataforma Web
 
 * ☐ Progressive Web App (PWA)
-* ☐ Modo offline
+* ☐ Modo Offline
 * ☐ Instalação em dispositivos móveis
 * ☐ Cache inteligente
 
 ### 🤖 Automação e IA
 
 * ☐ Associação automática de imagens por IA
-* ☐ Correção automática de descrições
-* ☐ Sugestão de categorias
+* ☐ Sugestão automática de categorias
+* ☐ Correção de descrições
 * ☐ Geração automática de textos promocionais
 
 ### 🔒 Infraestrutura
 
-* ☐ Deploy automatizado via GitHub Actions
+* ☐ GitHub Actions para deploy automático
 * ☐ Testes automatizados
 * ☐ Monitoramento de erros
-* ☐ Backup automático dos catálogos
+* ☐ Backup automático
 
+# 📊 Métricas do Projeto
 
+| Indicador | Quantidade |
+|------------|------------|
+| Produtos processados | 380+ |
+| Imagens catalogadas | 400+ |
+| Categorias | 5 |
+| Scripts Python | 5 |
+| Tecnologias utilizadas | 8+ |
 
 # 💡 Aprendizados
 
@@ -320,13 +344,15 @@ Durante o desenvolvimento foram praticados:
 
 ## Miguel Ferreira Sena
 
-🐍 Python Developer
+🐍 Desenvolvedor Python
+
+💻 Automação de Processos
+
+📊 Manipulação e Tratamento de Dados
+
+🌐 Desenvolvimento Web
 
 🔗 GitHub:
 https://github.com/ougwYT
-
-📫 Em busca de oportunidades para desenvolvimento Python, automação de processos e análise de dados.
-
----
 
 ⭐ Se gostou do projeto, deixe uma estrela no repositório.
