@@ -2,13 +2,12 @@
 
 > Sistema completo para geração automática de catálogos HTML e PDF a partir de listagens de produtos.
 
-![Python](https://img.shields.io/badge/Python-3.14-blue?logo=python)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Processing-green?logo=pandas)
-![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-black?logo=github)
-![Playwright](https://img.shields.io/badge/Playwright-PDF-red)
-![Status](https://img.shields.io/badge/Status-Concluído-success)
-
-
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Processing-green)
+![PDFPlumber](https://img.shields.io/badge/PDFPlumber-PDF%20Parsing-yellow)
+![Playwright](https://img.shields.io/badge/Playwright-PDF%20Generation-orange)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deploy-black)
+![Status](https://img.shields.io/badge/Status-Active-success)
 
 ## 🔗 Links
 
