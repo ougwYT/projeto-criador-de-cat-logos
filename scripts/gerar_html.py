@@ -5,9 +5,9 @@ from pathlib import Path
 
 import pandas as pd
 
-CSV_ENTRADA = "dados/produtos_com_imagem.csv"
+CSV_ENTRADA = Path().parent / "dados"/"produtos_com_imagem.csv"
 
-HTML_SAIDA = "docs/index.html"
+HTML_SAIDA = Path().parent / "docs/index.html"
 
 PASTA_IMAGENS_HTML = "imagens_nomeadas_corretamente"
 LOGO = "assets/logo.png"
