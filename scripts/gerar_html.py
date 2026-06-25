@@ -303,7 +303,7 @@ else:
 
 
 indice_itens = []
-
+botoes_categoria = []
 for categoria in ORDEM_CATEGORIAS:
     if "categoria" in df.columns:
         grupo = df[df["categoria"] == categoria]
@@ -320,17 +320,32 @@ for categoria in ORDEM_CATEGORIAS:
         """
     )
 
-indice = f"""
-<section class="indice-catalogo">
 
-    <h1>Índice</h1>
+for categoria in ORDEM_CATEGORIAS:
 
-    <ol>
-        {''.join(indice_itens)}
-    </ol>
+    if "categoria" in df.columns:
+        grupo = df[df["categoria"] == categoria]
 
-</section>
-"""
+        if grupo.empty:
+            continue
+
+    icone = ICONS.get(categoria, "📦")
+
+    botoes_categoria.append(
+        f"""
+        <a href="#categoria-{gerar_id_categoria(categoria)}"class="card-categoria-home">
+
+            <div class="icone-categoria">
+                {icone}
+            </div>
+
+            <span>
+                {escape(categoria)}
+            </span>
+
+        </a>
+        """
+    )
 capa = f"""
 <section class="capa-catalogo">
 
@@ -398,6 +413,17 @@ capa = f"""
 
 </section>
 """
+indice = f"""
+<section class="indice-catalogo">
+
+    <h1>Índice</h1>
+
+    <ol>
+        {''.join(indice_itens)}
+    </ol>
+
+</section>
+"""
 pagina_final = f"""
 
 <section class="pagina-final">
@@ -430,34 +456,7 @@ pagina_final = f"""
 
 </section>
 """
-botoes_categoria = []
 
-for categoria in ORDEM_CATEGORIAS:
-
-    if "categoria" in df.columns:
-        grupo = df[df["categoria"] == categoria]
-
-        if grupo.empty:
-            continue
-
-    icone = ICONS.get(categoria, "📦")
-
-    botoes_categoria.append(
-        f"""
-        <a href="#categoria-{gerar_id_categoria(categoria)}"
-           class="card-categoria-home">
-
-            <div class="icone-categoria">
-                {icone}
-            </div>
-
-            <span>
-                {escape(categoria)}
-            </span>
-
-        </a>
-        """
-    )
 html = f"""<!DOCTYPE html>
 <html lang="pt-BR">
 
