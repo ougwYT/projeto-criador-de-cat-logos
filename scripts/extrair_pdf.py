@@ -6,7 +6,7 @@ import pdfplumber
 
 PATH_ = Path().parent
 
-PDF_PATH = PATH_ / "entrada" / "lista_de_produtos" / "lista_de_produtos_7.pdf"
+PDF_PATH = PATH_ / "entrada" / "lista_de_produtos" / "lista_de_produtos_8.pdf"
 
 RAW_CSV = "dados/produtos_raw.csv"
 CSV_FINAL = "dados/produtos.csv"

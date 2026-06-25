@@ -6,6 +6,7 @@ from pathlib import Path
 import pandas as pd
 
 CSV_ENTRADA = Path().parent / "dados"/"produtos_com_imagem.csv"
+EMBALAGENS_CSV = Path().parent / "dados"/"emabalagens.csv"
 
 HTML_SAIDA = Path().parent / "docs/index.html"
 
@@ -51,6 +52,32 @@ def formatar_preco_brasil(preco):
     )
 
 
+def obter_texto_embalagem(codigo, produto, unidade):
+    codigo = str(codigo).strip()
+    produto_upper = str(produto).upper()
+    unidade = str(unidade).upper().strip()
+
+    if codigo in embalagens_por_codigo:
+        return embalagens_por_codigo[codigo]
+
+    if unidade == "CT":
+        return "1 cento — 100 peças"
+
+    if unidade == "CX":
+        match = re.search(
+            r"(\d{2,5})\s*(PCS|PC|PÇS|PECAS|PEÇAS|P)",
+            produto_upper
+        )
+
+        if match:
+            quantidade = match.group(1)
+            return f"Caixa com {quantidade} peças"
+
+        return "Preço por caixa"
+
+    return ""
+
+
 def build_card(row):
     codigo = str(row.get("codigo", "")).strip()
     produto = str(row.get("produto", "")).strip()
@@ -64,6 +91,22 @@ def build_card(row):
     texto_preco = "Preço"
     if unidade == "CT":
         texto_preco = "Preço do cento"
+
+    texto_embalagem = obter_texto_embalagem(
+        codigo,
+        produto,
+        unidade
+    )
+
+    embalagem_html = ""
+
+    if texto_embalagem:
+        embalagem_html = f"""
+        <p class="embalagem">
+            📦 {escape(texto_embalagem)}
+        </p>
+        """
+
     caminho_imagem = f"{PASTA_IMAGENS_HTML}/{imagem}"
     preco_html = ""
 
@@ -92,9 +135,10 @@ def build_card(row):
             <h2 class="nome">
                 {escape(produto)}
             </h2>
+            {embalagem_html}
 
             
-                {preco_html}
+            {preco_html}
             
 
         </div>
@@ -126,6 +170,22 @@ def gerar_id_categoria(categoria):
 
 
 df = pd.read_csv(CSV_ENTRADA).fillna("")
+
+embalagens_por_codigo = {}
+
+if Path(EMBALAGENS_CSV).exists():
+    df_embalagens = pd.read_csv(
+        EMBALAGENS_CSV,
+        dtype=str
+    ).fillna("")
+
+    embalagens_por_codigo = dict(
+        zip(
+            df_embalagens["codigo"].astype(str).str.strip(),
+            df_embalagens["embalagem"].astype(str).str.strip()
+        )
+    )
+
 
 if "catalogo" in df.columns:
     df = df[

@@ -538,6 +538,20 @@ body {
     font-size: 1.25rem;
 }
 
+.embalagem {
+    margin-top: .7rem;
+    padding: .55rem .75rem;
+
+    background: #EEF3FA;
+    color: var(--primary);
+
+    border-left: 4px solid var(--secondary);
+    border-radius: 8px;
+
+    font-size: .9rem;
+    font-weight: 700;
+}
+
 .preco {
     margin-top: 1rem;
 
