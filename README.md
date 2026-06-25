@@ -95,7 +95,7 @@ A página inicial apresenta a identidade visual da empresa, estatísticas do cat
 
 Os produtos são organizados automaticamente por categoria, exibindo imagem, código e preço de forma responsiva para desktop, tablet e dispositivos móveis.
 
-![Catálogo](docs/assets/screenshots/categoria.png)
+![Catálogo](docs/assets/screenshots/categorias.png)
 
 
 # 🛠 Tecnologias Utilizadas
